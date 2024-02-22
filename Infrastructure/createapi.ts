@@ -13,7 +13,7 @@ const apiAcrRegistryPwd = config.require("apiAcrRegistryPwd");
 const apiDockerImage = config.require("apiDockerImage");
 const apiDockerImageTag = config.require("apiDockerImageTag");
 
-const apiServicePlan = config.require("apiServicePlan");
+const apiServicePlan = "asphorsesraceapi";
 const servicePlan = new web.AppServicePlan(apiServicePlan, {
     name: apiServicePlan,
     resourceGroupName: resourceGroup.name,
