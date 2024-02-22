@@ -18,7 +18,7 @@ variables:
     solution: '**/*.sln'
     acrregistry: 'acrexperiment'
     dockerRegistryServicePrinciple: 'dockerRegistryServicePrinciple'
-    azureSubscription: 'azureServicePrinciple'
+    azureSubscription: 'azureResourceManagerServiceConnection'
 
 stages:
   - stage: create_api_docker_img 
