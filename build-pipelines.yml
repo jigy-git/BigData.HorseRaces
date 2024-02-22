@@ -17,6 +17,7 @@ variables:
     token: 'yflez7rk4b3pi2zsghvvg57b4zre533th4x2efjjvo6rcn2n4g6q'
     solution: '**/*.sln'
     acrregistry: 'acrexperiment'
+    dockerRegistryServicePrinciple: 'dockerRegistryServicePrinciple'
     azureSubscription: 'azureServicePrinciple'
 
 stages:
@@ -27,7 +28,7 @@ stages:
         steps:         
         - task: Docker@2
           inputs:
-            containerRegistry: '$(acrregistry)'
+            containerRegistry: '$(dockerRegistryServicePrinciple)'
             repository: 'horseraces-api'
             command: 'buildAndPush'
             Dockerfile: 'dockerfile'
