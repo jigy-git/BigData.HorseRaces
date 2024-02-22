@@ -8,7 +8,7 @@ const config = new pulumi.Config();
 
 const apiAcrRegistry = config.require("apiAcrRegistry");
 const apiAcrRegistryUser = config.require("apiAcrRegistryUser");
-const apiAcrRegistryPwd = config.require("apiAcrRegistryPwd");
+//const apiAcrRegistryPwd = config.require("apiAcrRegistryPwd");
 
 const apiDockerImage = config.require("apiDockerImage");
 const apiDockerImageTag = config.require("apiDockerImageTag");
@@ -43,7 +43,7 @@ const api = new web.WebApp(apiName, {
             },
             {
               "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
-              "value": apiAcrRegistryPwd,
+              "value": 'aCh7wszvZfbAbDH37bJA2MnGF8ocpfa7jLrqdVvVpN+ACRCEXGV7',
             },
             {
               "name": "DOCKER_REGISTRY_SERVER_URL",

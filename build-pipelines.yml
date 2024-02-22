@@ -14,9 +14,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-    token: 'yflez7rk4b3pi2zsghvvg57b4zre533th4x2efjjvo6rcn2n4g6q'
-    solution: '**/*.sln'
     acrregistry: 'acrexperiment'
+    acrRepository: 'horseraces-api'
     dockerRegistryServicePrinciple: 'dockerRegistryServicePrinciple'
     azureSubscription: 'azureResourceManagerServiceConnection'
 
@@ -28,8 +27,8 @@ stages:
         steps:         
         - task: Docker@2
           inputs:
-            containerRegistry: '$(dockerRegistryServicePrinciple)'
-            repository: 'horseraces-api'
+            containerRegistry: $(dockerRegistryServicePrinciple)
+            repository: $(acrRepository)
             command: 'buildAndPush'
             Dockerfile: 'dockerfile'
             buildContext: '$(System.DefaultWorkingDirectory)'
@@ -57,12 +56,21 @@ stages:
               stack: 'dev'
               createStack: true
             displayName: 'Preview Pulumi - initialize to add in config'
-        
+
           - task: Pulumi@1
             inputs:
               azureSubscription: '$(azureSubscription)'
               command: 'config'
-              args: 'set dockerImageTag $(Build.BuildId)'
+              args: 'set apiDockerImage $(acrRepository)'
+              cwd: 'Infrastructure/'
+              stack: 'dev'
+            displayName: 'Setting Docker ImageTag to current build'
+
+          - task: Pulumi@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              command: 'config'
+              args: 'set apiDockerImageTag $(Build.BuildId)'
               cwd: 'Infrastructure/'
               stack: 'dev'
             displayName: 'Setting Docker ImageTag to current build'
