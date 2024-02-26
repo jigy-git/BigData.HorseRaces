@@ -51,7 +51,7 @@ stages:
             inputs:
               azureSubscription: '$(azureSubscription)'
               command: 'preview'
-              loginArgs: '--cloud-url azblob://horseraceapideploystate'
+              loginArgs: '--cloud-url azblob://pulumideploystateapi'
               cwd: 'Infrastructure/'
               stack: 'dev'
               createStack: true
@@ -80,7 +80,7 @@ stages:
             inputs:
               azureSubscription: '$(azureSubscription)'
               command: 'up'
-              loginArgs: '--cloud-url azblob://horseraceapideploystate'
+              loginArgs: '--cloud-url azblob://pulumideploystateapi'
               cwd: 'Infrastructure/'
               stack: 'dev'
               args: '--yes'
@@ -103,7 +103,7 @@ stages:
             inputs:
               azureSubscription: '$(azureSubscription)'
               command: 'destroy'
-              loginArgs: '--cloud-url azblob://horseraceapideploystate'
+              loginArgs: '--cloud-url azblob://pulumideploystateapi'
               cwd: 'Infrastructure/'
               stack: 'dev'
               args: '--yes'
