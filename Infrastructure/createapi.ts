@@ -43,7 +43,7 @@ const api = new web.WebApp(apiName, {
             },
             {
               "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
-              "value": 'aCh7wszvZfbAbDH37bJA2MnGF8ocpfa7jLrqdVvVpN+ACRCEXGV7',
+              "value": 'G/MtMVvt7fwmGBa9XDP2LOa2IaZLGsDNcB02SK51SQ+ACRD38aX9',
             },
             {
               "name": "DOCKER_REGISTRY_SERVER_URL",
