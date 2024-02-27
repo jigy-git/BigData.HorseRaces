@@ -8,12 +8,12 @@ const config = new pulumi.Config();
 
 const apiAcrRegistry = config.require("apiAcrRegistry");
 const apiAcrRegistryUser = config.require("apiAcrRegistryUser");
-const apiAcrRegistryPwd = config.require("apiAcrRegistryPwd");
+//const apiAcrRegistryPwd = config.require("apiAcrRegistryPwd");
 
 const apiDockerImage = config.require("apiDockerImage");
 const apiDockerImageTag = config.require("apiDockerImageTag");
 
-const apiServicePlan = config.require("apiServicePlan");
+const apiServicePlan = "asphorsesraceapi";
 const servicePlan = new web.AppServicePlan(apiServicePlan, {
     name: apiServicePlan,
     resourceGroupName: resourceGroup.name,
@@ -43,7 +43,7 @@ const api = new web.WebApp(apiName, {
             },
             {
               "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
-              "value": apiAcrRegistryPwd,
+              "value": 'G/MtMVvt7fwmGBa9XDP2LOa2IaZLGsDNcB02SK51SQ+ACRD38aX9',
             },
             {
               "name": "DOCKER_REGISTRY_SERVER_URL",
