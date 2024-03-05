@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "BigData.HorseRaces.DataProcessor": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7008"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 30366,
+      "useSSL": false
+    }
+  }
+}
