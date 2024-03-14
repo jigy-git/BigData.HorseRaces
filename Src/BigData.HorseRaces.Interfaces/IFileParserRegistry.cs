@@ -2,6 +2,6 @@
 {
     public interface IFileParserRegistry
     {
-        public IFileParser GetParser(string fileName);
+        public IFileParser? GetParser(string fileName);
     }
 }

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BigData.HorseRaces.Interfaces\BigData.HorseRaces.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
