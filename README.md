@@ -4,6 +4,11 @@ This is sample project to implement Big Data Architecture suggested in one of th
 
 The application recieves horse racing data from various sources, "collects" it and outputs the horse names in price ascending order.
 
-# Architecture 
+# System Design 
 
-![Architecture Image](HorseRace.png)
+![Architecture Image](HorseRaceArchitecture.png)
+
+
+# Software Design
+
+The 

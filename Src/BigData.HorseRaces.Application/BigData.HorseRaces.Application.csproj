@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BigData.HorseRaces.Infrastructure\BigData.HorseRaces.Infrastructure.csproj" />
     <ProjectReference Include="..\BigData.HorseRaces.Interfaces\BigData.HorseRaces.Interfaces.csproj" />
+    <ProjectReference Include="..\BigData.HorseRaces.ViewModels\BigData.HorseRaces.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

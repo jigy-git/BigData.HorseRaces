@@ -1,6 +1,12 @@
 ﻿namespace BigData.HorseRaces.Interfaces;
 
+public interface IIngestedData
+{
+    public Guid Id { get; set; }
+    public IEnumerable<object> data { get; set; }
+}
+
 public interface IDataProcessor
 {
-    public Task<object> ProcessAsync(IEnumerable<object> data);
+    public Task<IIngestedData> PrepareDataForIngestationAsync(IEnumerable<object> data);
 }

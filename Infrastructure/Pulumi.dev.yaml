@@ -1,7 +1,0 @@
-config:
-  azure-native:location: australiasoutheast
-  horseraces:apiAcrRegistry: acrexperiment.azurecr.io
-  horseraces:apiAcrRegistryPwd: XYZ
-  horseraces:apiAcrRegistryUser: acrexperiment
-  horseraces:apiDockerImage: horseraces-api
-  horseraces:apiDockerImageTag: "1"

@@ -14,7 +14,7 @@ var host = new HostBuilder()
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
 
-        services.AddSingleton<IFileProcessingService, FileProcessingService>();
+        services.AddSingleton<IDataIngestionService, DataIngestionService>();
 
         //Register Domain Services
         services.AddSingleton<IFileParserRegistry, FileParserRegistry>();
